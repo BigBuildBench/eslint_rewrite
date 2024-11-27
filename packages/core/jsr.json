@@ -1,0 +1,13 @@
+{
+  "name": "@eslint/core",
+  "version": "0.9.0",
+  "exports": "./dist/esm/types.d.ts",
+  "publish": {
+    "include": [
+      "dist/esm/types.d.ts",
+      "README.md",
+      "jsr.json",
+      "LICENSE"
+    ]
+  }
+}

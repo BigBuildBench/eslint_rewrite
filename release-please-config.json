@@ -1,0 +1,60 @@
+{
+  "bootstrap-sha": "b489df4cf3eae08a25ed401db207a78100cf4fc9",
+  "plugins": ["node-workspace"],
+  "bump-minor-pre-major": true,
+  "packages": {
+    "packages/compat": {
+      "release-type": "node",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "jsr.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/config-array": {
+      "release-type": "node",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "jsr.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/core": {
+      "release-type": "node",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "jsr.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/object-schema": {
+      "release-type": "node",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "jsr.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "packages/migrate-config": {
+      "release-type": "node"
+    },
+    "packages/plugin-kit": {
+      "release-type": "node",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "jsr.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "eslint-rewrite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "build": "node scripts/build.js",
+    "build:readme": "node tools/update-readme.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "test:jsr": "npm run test:jsr --workspaces --if-present",
+    "test:types": "tsc"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "!(*.{js,ts})": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "eslint": "^9.11.1",
+    "eslint-config-eslint": "^11.0.0",
+    "got": "^14.4.1",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.0",
+    "yorkie": "^2.0.0"
+  }
+}
